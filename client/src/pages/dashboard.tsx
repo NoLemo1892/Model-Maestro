@@ -10,6 +10,7 @@ import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, Di
 import { Sparkles, Play, RotateCcw, Settings2, FileCode2, Terminal, Network } from "lucide-react";
 import { cn } from "@/lib/utils";
 import generatedBg from "@assets/generated_images/subtle_dark_blue_digital_grid_background.png";
+import sunLifeLogo from "@assets/stock_images/sun_life_logo_brand_cc342e9d.jpg";
 
 type WorkflowState = "idle" | "analyzing" | "dispatching" | "merging" | "complete";
 
@@ -128,10 +129,10 @@ export default function Dashboard() {
       <header className="relative z-10 border-b bg-background/80 backdrop-blur-md sticky top-0">
         <div className="container mx-auto px-6 h-16 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="h-8 w-8 bg-primary/20 rounded-md flex items-center justify-center border border-primary/50">
-              <Sparkles className="h-4 w-4 text-primary" />
+            <div className="h-8 w-8 rounded-md overflow-hidden flex items-center justify-center border border-primary/50 bg-white">
+              <img src={sunLifeLogo} alt="Sun Life" className="h-6 w-6 object-contain" />
             </div>
-            <span className="font-bold text-lg tracking-tight">ModelGateway<span className="text-primary">.ai</span></span>
+            <span className="font-bold text-lg tracking-tight">Sun Life ModelGateway<span className="text-primary">.ai</span></span>
             <Badge variant="outline" className="ml-2 font-mono text-xs border-primary/30 text-primary/80">
               Internal Beta
             </Badge>
